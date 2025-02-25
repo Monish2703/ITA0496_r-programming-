@@ -1,0 +1,2 @@
+print("Objects currently in memory:")
+print(ls())

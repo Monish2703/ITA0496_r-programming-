@@ -1,0 +1,24 @@
+data("iris")
+
+print(dim(iris))
+print(str(iris))
+print(summary(iris))
+print(apply(iris[, 1:4], 2, sd))
+
+print(aggregate(. ~ Species, data=iris, FUN=mean))
+print(aggregate(. ~ Species, data=iris, FUN=sd))
+
+print(quantile(iris$Sepal.Width))
+print(quantile(iris$Sepal.Length))
+
+iris$Sepal.Length.Cate <- cut(iris$Sepal.Length, breaks=quantile(iris$Sepal.Length, probs=seq(0,1,0.25)), labels=c("Low", "Medium", "High", "Very High"))
+
+avg_values <- aggregate(. ~ Species + Sepal.Length.Cate, data=iris[, -5], FUN=mean)
+print(avg_values)
+
+avg_mean <- aggregate(. ~ Species + Sepal.Length.Cate, data=iris, FUN=mean)
+print(avg_mean)
+
+library(reshape2)
+pivot_table <- dcast(iris, Species ~ Sepal.Length.Cate, length)
+print(pivot_table)

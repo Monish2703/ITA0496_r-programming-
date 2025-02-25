@@ -1,0 +1,5 @@
+find_factors <- function(n) {
+  return(which(n %% 1:n == 0))
+}
+num <- as.integer(readline(prompt="Enter a number: "))
+cat("Factors of", num, ":", find_factors(num), "\n")

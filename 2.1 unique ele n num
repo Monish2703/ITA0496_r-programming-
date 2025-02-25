@@ -1,0 +1,10 @@
+unique_chars <- function(str) {
+  return(unique(strsplit(str, NULL)[[1]]))
+}
+unique_numbers <- function(vec) {
+  return(unique(vec))
+}
+string_input <- "hello world"
+vector_input <- c(1, 2, 2, 3, 4, 4, 5)
+cat("Unique characters in string:", unique_chars(string_input), "\n")
+cat("Unique numbers in vector:", unique_numbers(vector_input), "\n")

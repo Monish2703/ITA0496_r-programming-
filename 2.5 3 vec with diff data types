@@ -1,0 +1,6 @@
+numeric_vector <- c(10, 20, 30)
+character_vector <- c("apple", "banana", "cherry")
+logical_vector <- c(TRUE, FALSE, TRUE)
+cat("Numeric Vector:", numeric_vector, "Type:", typeof(numeric_vector), "\n")
+cat("Character Vector:", character_vector, "Type:", typeof(character_vector), "\n")
+cat("Logical Vector:", logical_vector, "Type:", typeof(logical_vector), "\n")

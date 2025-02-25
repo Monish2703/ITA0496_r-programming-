@@ -1,0 +1,5 @@
+vector_example <- c(1, 2, 3, 4, 5)
+matrix_example <- matrix(1:9, nrow=3)
+function_example <- function(x) { return(x^2) }
+my_list <- list(vector_example, matrix_example, function_example)
+print(my_list)

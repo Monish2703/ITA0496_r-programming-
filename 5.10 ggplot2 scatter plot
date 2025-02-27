@@ -1,0 +1,6 @@
+ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Scatter Plot of wt vs mpg with Regression Lines",
+       x = "Weight (1000 lbs)", y = "Miles per Gallon", color = "Cylinders") +
+  theme_minimal()

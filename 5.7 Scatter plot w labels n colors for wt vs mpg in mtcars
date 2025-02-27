@@ -1,0 +1,6 @@
+ggplot(mtcars, aes(x = wt, y = mpg, label = rownames(mtcars), color = factor(cyl))) +
+  geom_point(size = 3) +
+  geom_text(vjust = -1, size = 3) +
+  labs(title = "Scatter Plot of wt vs mpg with Labels and Colors",
+       x = "Weight (1000 lbs)", y = "Miles per Gallon", color = "Cylinders") +
+  theme_minimal()

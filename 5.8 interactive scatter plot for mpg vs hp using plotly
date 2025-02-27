@@ -1,0 +1,8 @@
+library(ggplot2)
+library(plotly)
+p <- ggplot(mtcars, aes(x = hp, y = mpg, text = rownames(mtcars))) +
+  geom_point(color = "blue", size = 3) +
+  labs(title = "Interactive Scatter Plot of mpg vs hp",
+       x = "Horsepower", y = "Miles per Gallon") +
+  theme_minimal()
+ggplotly(p)

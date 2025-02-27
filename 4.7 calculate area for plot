@@ -1,0 +1,8 @@
+data_grid <- expand.grid(length = 1:10, width = 1:10)
+data_grid$area <- with(data_grid, length * width)
+
+library(ggplot2)
+ggplot(data_grid, aes(x = length, y = width, fill = area)) +
+  geom_tile() +
+  scale_fill_gradient(low = "blue", high = "red") +
+  labs(title = "Rectangle Areas", x = "Length", y = "Width", fill = "Area")

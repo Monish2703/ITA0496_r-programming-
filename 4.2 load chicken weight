@@ -1,0 +1,4 @@
+data(ChickWeight)
+std_dev_weight <- sd(ChickWeight$weight)
+heaviest_chicken <- ChickWeight[which.max(ChickWeight$weight), ]
+age_groups <- table(ChickWeight$Time)

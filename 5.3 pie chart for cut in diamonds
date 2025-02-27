@@ -1,0 +1,10 @@
+library(ggplot2)
+data(diamonds)
+cut_counts <- as.data.frame(table(diamonds$cut))
+colnames(cut_counts) <- c("Cut", "Count")
+ggplot(cut_counts, aes(x = "", y = Count, fill = Cut)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of Different Cut Categories in Diamonds Dataset") +
+  theme_void() +  # Removes background and axis for a cleaner look
+  scale_fill_brewer(palette = "Set3")  # Uses a visually appealing color palette

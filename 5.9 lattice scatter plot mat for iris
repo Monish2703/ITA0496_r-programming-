@@ -1,0 +1,3 @@
+library(lattice)
+splom(iris[, 1:4], groups = iris$Species, auto.key = list(columns = 3),
+      main = "Scatter Plot Matrix of Iris Dataset")

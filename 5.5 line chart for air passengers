@@ -1,0 +1,9 @@
+data("AirPassengers")
+air_data <- data.frame(
+  Month = as.Date(time(AirPassengers), format = "%Y-%m"),
+  Passengers = as.numeric(AirPassengers)
+)
+ggplot(air_data, aes(x = Month, y = Passengers)) +
+  geom_line(color = "blue", size = 1) +
+  labs(title = "Trend of Air Passengers Over Time", x = "Year", y = "Number of Passengers") +
+  theme_minimal()

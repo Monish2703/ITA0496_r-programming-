@@ -1,0 +1,4 @@
+stock_x <- c(10, 12, 14, 16, 18, 20, 22, 24, 26, 28)
+stock_y <- c(8, 11, 15, 17, 19, 23, 25, 27, 30, 32)
+cov_stock <- cov(stock_x, stock_y)
+corr_stock <- cor(stock_x, stock_y)

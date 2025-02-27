@@ -1,0 +1,6 @@
+test_scores <- c(85, 90, 78, 92, 88, 76, 95, 89, 84, 91, 87, 82, 90, 93, 88, 85, 77, 94, 80, 79)
+min_score <- min(test_scores)
+max_score <- max(test_scores)
+range_score <- max_score - min_score
+variance_score <- var(test_scores)
+std_dev_score <- sd(test_scores)

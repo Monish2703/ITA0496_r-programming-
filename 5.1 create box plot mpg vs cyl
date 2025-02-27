@@ -1,0 +1,8 @@
+library(ggplot2)
+mtcars$cyl <- as.factor(mtcars$cyl)
+ggplot(mtcars, aes(x = cyl, y = mpg)) +
+  geom_boxplot(fill = "lightblue", color = "black", outlier.color = "red", outlier.shape = 16) +
+  labs(title = "Box Plot of MPG by Cylinder Count",
+       x = "Number of Cylinders",
+       y = "Miles per Gallon (mpg)") +
+  theme_minimal()

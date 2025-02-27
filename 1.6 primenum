@@ -1,7 +1,7 @@
 primenum<- function(n) {
   if (n < 2) return(integer(0))
   primes <- rep(TRUE, n)
-  primes[1] <- FALSE  # 1 is not a prime
+  primes[1] <- FALSE  
   for(i in 2:sqrt(n)) {
     if (primes[i]) {
       primes[seq(i^2, n, by=i)] <- FALSE

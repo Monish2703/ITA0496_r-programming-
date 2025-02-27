@@ -1,0 +1,8 @@
+library(ggplot2)
+ggplot(iris, aes(x = Species, fill = Species)) +
+  geom_bar() +
+  labs(title = "Count of Each Species in the Iris Dataset",
+       x = "Species",
+       y = "Count") +
+  theme_minimal() +
+  scale_fill_manual(values = c("setosa" = "lightblue", "versicolor" = "lightgreen", "virginica" = "lightcoral"))
